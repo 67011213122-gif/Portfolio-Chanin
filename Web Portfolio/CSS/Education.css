@@ -1,0 +1,267 @@
+/* ==========================================================================
+   EDUCATION & ABOUT PAGE STYLES
+   ========================================================================== */
+
+/* Page Container Padding for Fixed Header */
+.about,
+.education {
+    padding: 100px 12% 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.education {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+.about-card-container {
+    background: rgba(16, 25, 35, 0.72);
+    border: 1px solid rgba(0, 255, 153, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 60px;
+    align-items: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 153, 0.08);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-card-container:hover {
+    border-color: rgba(0, 255, 153, 0.35);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 255, 153, 0.14);
+}
+
+.about-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.about-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(0.95);
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 255, 153, 0.25);
+    pointer-events: none;
+}
+
+.about-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ffffff 40%, #c4f9e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quote {
+    font-style: italic;
+    color: #cbd5e1;
+    margin: 18px 0 28px;
+    padding-left: 18px;
+    border-left: 3px solid var(--primary);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    background: rgba(5, 11, 16, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 14px 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    border-color: rgba(0, 255, 153, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.detail-item i {
+    color: var(--primary);
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.detail-item span b {
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.desc {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   EDUCATION SECTION
+   ========================================================================== */
+.education-title {
+    margin-bottom: 45px;
+}
+
+.education-title h1 {
+    font-size: 44px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 40%, #c4f9e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 8px;
+}
+
+.education-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.edu-card {
+    background: rgba(16, 25, 35, 0.75);
+    border: 1px solid rgba(0, 255, 153, 0.15);
+    border-radius: 22px;
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 255, 153, 0.5);
+    box-shadow: 0 20px 45px rgba(0, 255, 153, 0.2), 0 0 25px rgba(0, 255, 153, 0.15);
+}
+
+.edu-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.edu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.edu-card:hover .edu-image img {
+    transform: scale(1.1);
+}
+
+.edu-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(16, 25, 35, 0.9) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.edu-info {
+    padding: 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: rgba(0, 255, 153, 0.12);
+    border: 1px solid rgba(0, 255, 153, 0.25);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.edu-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.edu-info h3 {
+    font-size: 16px;
+    color: #cbd5e1;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.edu-info p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .about,
+    .education {
+        padding: 95px 6% 40px;
+    }
+
+    .about-card-container {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 340px;
+    }
+
+    .education-content {
+        grid-template-columns: 1fr;
+    }
+
+    .detail {
+        grid-template-columns: 1fr;
+    }
+}
